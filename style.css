@@ -1,35 +1,136 @@
-/*propiedades de texto */
-h1{
-    color: rgb(252, 163, 238);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 40px;
-    font-weight: 1em;
-}
-h2 {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 20px;
-}
-button{
-    color: rgb(252, 163, 238);
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"); /* Importa la fuente 'Open Sans' */
+
+*, html { /* Aplica a todos los elementos y al elemento html */
+  box-sizing: border-box; /* Incluye padding y border en el tamaño total */
+  font-family: 'Open Sans', sans-serif; /* Define 'Open Sans' como la fuente base */
 }
 
-/*propiedades de imagen */
-image {
-width: 100%;
-border-radius: 20px;
-}
-img:hover{
-filter: blur(10%);
+html, body { /* Estilos para el html y el body */
+    margin: 0; /* Elimina el margen por defecto */
+    padding: 0; /* Elimina el padding por defecto */
+    background-color: #FFFEFA; /* Fondo claro */
 }
 
-main{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: auto;
-    margin-left: 50px;
-    margin-right: 50px;
-    column-gap: 20px;
-    grid-template-areas: ;
-
-
+main { /* Estilo para el elemento main */
+    display: grid; /* Activa el grid layout */
+    grid-template-columns: 1fr 2fr; /* Define dos columnas con proporciones 1:2 */
+    grid-template-rows: auto auto; /* Define dos filas de altura automática */
+    margin-left: 50px; /* Márgen izquierdo de 50px */
+    margin-right: 50px; /* Márgen derecho de 50px */
+    column-gap: 20px; /* Espacio entre columnas de 20px */
+    grid-template-areas: /* Define áreas específicas dentro del grid */
+        "title title" /* Título ocupa ambas columnas */
+        "contenido proyectos"; /* Contenido y proyectos ocupan cada una una columna */
 }
+
+#left { /* Estilo para el elemento con id left */
+    padding: 30px; /* Padding de 30px en todos los lados */
+    padding-top: 3%; /* Sin padding en la parte superior */
+    grid-area: contenido; /* Asigna este elemento al área 'contenido' */
+}
+
+#right { /* Estilo para el elemento con id right */
+    padding: 30px; /* Padding de 30px en todos los lados */
+    padding-top: 2%; /* Sin padding en la parte superior */
+    grid-area: proyectos; /* Asigna este elemento al área 'proyectos' */
+}
+
+h1 { /* Estilo para el título h1 */
+    padding-bottom: 0%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 4em; /* Tamaño de fuente grande (4em) */
+    font-weight: bold; /* Fuente en negrita */
+    color: #132FBA; /* Color naranja */
+}
+
+h2 { /* Estilo para subtítulos h2 */
+    padding-top: 0%;
+    font-size: 1.5em;
+    color: #799CF0; /* Tamaño de fuente mediano (1.5em) */
+    
+}
+
+p { /* Estilo para párrafos p */
+    font-size: 18px; /* Tamaño de fuente de 18px */
+    color: #132FBA;
+}
+
+.title { /* Estilo para el elemento con clase title */
+    grid-area: title; /* Asigna este elemento al área 'title' */
+    padding-left: 30px; /* Padding izquierdo de 30px */
+    border-bottom: 1.5px solid #132FBA;
+    line-height: 0.3;
+    text-align: center;
+}
+
+.content { /* Estilo para el elemento con clase content */
+    padding: 0; /* Sin padding */
+    text-align: justify; /* Justifica el texto */
+    word-break: normal; /* Permite el corte de palabras natural */
+}
+
+.proyectos { /* Estilo para el contenedor con clase proyectos */
+    display: grid; /* Activa el grid layout */
+    grid-template-columns: 1fr 1fr 1fr; /* Tres columnas iguales */
+    column-gap: 30px; /* Espacio entre columnas de 30px */
+    row-gap: 20px; /* Espacio entre filas de 20px */
+    height: 450px; /* Altura fija de 450px */
+    overflow-y: auto; /* Activa el scroll vertical si es necesario */
+    background-color: #f7f6f0;
+    padding: 3%;
+}
+
+.proyectos nav { /* Estilo para el elemento nav dentro de .proyectos */
+    display: contents; /* Los hijos se comportan como si estuvieran directamente en el grid */
+}
+
+.proyectos a { /* Estilo para los enlaces dentro de .proyectos */
+    display: block; /* El enlace ocupa toda la columna */
+}
+
+.proyectos nav a img { /* Estilo para las imágenes dentro de los enlaces en .proyectos */
+    width: 100%; /* Imágenes ocupan todo el ancho del contenedor */
+    border-radius: 10px; /* Bordes redondeados */
+    margin-bottom: 1ex; /* Margen inferior de 1ex */
+    border: 3px solid transparent; /* Borde de 3px invisible */
+}
+
+.proyectos nav a:hover img { /* Estilo hover para las imágenes en .proyectos */
+    filter: blur(3px); /* Desenfoque de 5px al pasar el ratón */
+    opacity: 90%; /* Reducción de la opacidad al 90% */
+}
+
+button { /* Estilo para los botones */
+    border-radius: 20px; /* Bordes redondeados */
+    padding: 10px 20px; /* Padding de 10px arriba y abajo, 20px a los lados */
+    background-color: rgb(230, 230, 230); /* Color de fondo gris claro */
+    font-size: 14px; /* Tamaño de fuente de 14px */
+    font-weight: bold; /* Texto en negrita */
+    color: #F87A05; /* Texto naranja */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cursor de mano al pasar por encima */
+}
+
+button:hover { /* Estilo hover para los botones */
+    background-color: #F87A05; /* Fondo cambia a naranja */
+    color: black; /* Texto cambia a negro */
+    font-weight: bold; /* Mantiene el texto en negrita */
+}
+
+@media (max-width: 900px) { /* Estilo responsivo para pantallas pequeñas */
+    main { /* Ajustes en el elemento main */
+        display: grid; /* Activa el grid layout */
+        grid-template-columns: 1fr; /* Una sola columna */
+        grid-template-rows: auto auto auto; /* Tres filas automáticas */
+        grid-template-areas: /* Reorganiza las áreas del grid */
+            "title" /* Título ocupa la primera fila */
+            "contenido" /* Contenido ocupa la segunda fila */
+            "proyectos"; /* Proyectos ocupa la tercera fila */
+        margin: 0 10px; /* Márgenes laterales reducidos a 10px */
+    }
+    
+    h1 { /* Ajustes en el título h1 */
+        font-size: 3em; /* Reduce el tamaño de fuente a 3em */
+    }
+}
+
