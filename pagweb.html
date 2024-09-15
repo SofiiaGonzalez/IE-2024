@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio web</title>
+    <link rel="stylesheet" type="text/css" href="stylesweb.css">
+    <style>
+         ::-webkit-scrollbar {
+            width: 12px; /* Ancho de la barra de desplazamiento */
+        }
+
+        /* Cambia el color del "track" (el área de fondo de la scrollbar) */
+        ::-webkit-scrollbar-track {
+            background-color: #f1f1f1; /* Fondo claro */
+        }
+
+        /* Cambia el color del "thumb" (la barra que se desliza) */
+        ::-webkit-scrollbar-thumb {
+            background-color: #043281; /* Color del deslizador */
+            border-radius: 10px; /* Redondea las esquinas */
+        }
+
+        /* Cambia el color del deslizador cuando se pasa el cursor por encima */
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #021e50; /* Color más oscuro al pasar el cursor */
+        }
+
+        /* Para que haya algo de contenido en la página */
+        body {
+            height: 200vh;
+            margin: 0;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!--encabezado-->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#about">About me</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Imagen Escrita 2024</h1>
+        <p>Portafolio de Sofía González</p>
+    </section>
+
+    <!--2da parte pag web-->
+    <div class="container">
+        <div class="content">
+            <div class="text-section" id="proyectos">
+                <h1>Proyectos</h1>
+                <p>Esta página web corresponde a mi portafolio personal, en el que he recopilado los sketches y proyectos desarrollados a lo largo del semestre en el curso. A través de este espacio, he documentado mi proceso creativo, junto con los avances técnicos en el uso de código HTML, CSS y JavaScript. Cada sección presenta el aprendizaje y evolución de mis habilidades, desde los primeros bocetos hasta la implementación de elementos interactivos y visuales en la web.</p>
+                <div class="button_space"><a href="https://wiki.ead.pucv.cl/Imagen_Escrita_2024" class="button_dos">Wiki curso</a></div>
+            </div>
+            <div class="gallery">
+                <div class="item">
+                    <a href="https://pagina1.com" target="_blank">
+                        <img src="img/Tarea1.png" alt="Luna">
+                        <p>Cuadrados</p>
+                    </a>
+                    <span>Tarea 1</span>
+                </div>
+                <div class="item">
+                    <a href="https://pagina2.com" target="_blank">
+                        <img src="img/Tarea2.png" alt="Marta">
+                        <p>Codicionales</p>
+                    </a>
+                    <span>Tarea 2</span>
+                </div>
+                <!-- Añadir más imágenes aquí -->
+                <div class="item">
+                    <a href="https://pagina1.com" target="_blank">
+                        <img src="img/img1.png" alt="Luna">
+                        <p>?</p>
+                    </a>
+                    <span>Tarea 3</span>
+                </div>
+                <div class="item">
+                    <a href="https://pagina2.com" target="_blank">
+                        <img src="img/img1.png" alt="Marta">
+                        <p>?</p>
+                    </a>
+                    <span>Tarea 4</span>
+                </div>
+                <div class="item">
+                    <a href="https://pagina2.com" target="_blank">
+                        <img src="img/img1.png" alt="Marta">
+                        <p>?</p>
+                    </a>
+                    <span>Tarea 5</span>
+                </div>
+                <div class="item">
+                    <a href="https://pagina2.com" target="_blank">
+                        <img src="img/img1.png" alt="Marta">
+                        <p>?</p>
+                    </a>
+                    <span>Tarea 6</span>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <!--3ra parte pag web-->
+    <section class="feature-section" id="about">
+        <div class="feature-container">
+            <div class="feature-text">
+                <h1>Sofía González Ortega</h1>
+                <p>Estudiante de tercer año de diseño de la Escuela de Arquitectura y Diseño, Pontificia Universidad Católica de Valparaíso.</p>
+                <div class="button_tres"> <a href="https://wiki.ead.pucv.cl/Sofia_Gonzalez" class="feature-button">Wiki Casiopea</a> </div>
+            </div>
+            <div class="feature-image">
+                <img src="img/imgsofia.jpg" alt="Sofía González" height="400px" width="400px">
+            </div>
+        </div>
+    </section>
+
+    <!--4ta parte pag web - Contacto-->
+    <section class="contact-section" id="contact">
+        <div class="contact-container">
+            <h1>Contacto</h1>
+            <p><strong>Email PUCV:</strong> sofia.gonzalez.o@mail.pucv.cl</p>
+            <p><strong>Universidad:</strong> Pontificia Universidad Católica de Valparaíso</p>
+        </div>
+    </section>
+</body>
+</html>
